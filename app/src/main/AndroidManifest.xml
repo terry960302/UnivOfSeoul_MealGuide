@@ -16,7 +16,12 @@
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="@string/admob_app_id"/>
-        <activity android:name=".SubActivity">
+        <activity
+                android:name=".SubActivity"
+                android:parentActivityName=".MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.univofseoul_meal.MainActivity"/>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

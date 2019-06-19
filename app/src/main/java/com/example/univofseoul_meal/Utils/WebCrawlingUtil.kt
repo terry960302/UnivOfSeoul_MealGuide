@@ -29,7 +29,7 @@ object WebCrawlingUtil {
 
             //즉각적으로 ui에 띄워주려면 이 스레드 사용해야함.(화면에 띄우는 건 여기에)
             uiThread {
-                if(textview.text == ""){
+                if(textview.text.length < 10){
                     textview.text = "이 시간은 운영하지 않습니다."
                 }
                 else{

@@ -5,9 +5,9 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent"
+        android:background="#4F9BCD"
         tools:context=".MainActivity">
-    <androidx.cardview.widget.CardView
+   <androidx.cardview.widget.CardView
             android:layout_width="200dp"
             android:layout_height="150dp"
             app:cardCornerRadius="20dp"
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/adView"
-                ads:adSize="BANNER"
+                ads:adSize="SMART_BANNER"
                 ads:adUnitId="@string/banner_ad_unit_id"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
