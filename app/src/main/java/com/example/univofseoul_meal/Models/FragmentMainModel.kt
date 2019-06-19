@@ -1,4 +1,4 @@
-package com.example.univofseoul_meal.Model
+package com.example.univofseoul_meal.Models
 
 class FragmentMainModel(val placeName : String,
                         val placeImage : Int) {

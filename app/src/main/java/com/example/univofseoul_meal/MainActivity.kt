@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.univofseoul_meal.Adapter.pagerAdapter_main
-import com.example.univofseoul_meal.Model.FragmentMainModel
+import com.example.univofseoul_meal.Models.FragmentMainModel
 import com.example.univofseoul_meal.viewpagerAnim.Carousel
 import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.activity_main.*

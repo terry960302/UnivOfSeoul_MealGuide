@@ -1,4 +1,4 @@
-package com.example.univofseoul_meal.Model
+package com.example.univofseoul_meal.Models
 
 class FragmentSubModel(val desc : String) {
     constructor() :this("")

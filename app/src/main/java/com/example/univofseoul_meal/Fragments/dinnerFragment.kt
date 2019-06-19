@@ -9,16 +9,22 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.univofseoul_meal.R
+import com.example.univofseoul_meal.Utils.WebCrawlingUtil
+import kotlinx.android.synthetic.main.fragment_dinner.view.*
 
 class dinnerFragment : androidx.fragment.app.Fragment() {
-
-    fun newInstance() : dinnerFragment {
-        return dinnerFragment()
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view =   inflater.inflate(R.layout.fragment_dinner, container, false)
+
+        //MainActivity에서 받은 string -> 함수로 링크 뽑아내기 -> 그 링크로 웹크롤링 정보가져오기
+        val address = arguments?.getString("address").toString()
+
+        WebCrawlingUtil.getMenuMap(title = "석식",
+            textview = view.textview_dinnerFrag,
+            address = address)
+
         return view
     }
 }

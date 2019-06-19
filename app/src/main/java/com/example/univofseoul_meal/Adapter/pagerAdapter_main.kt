@@ -4,14 +4,13 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import androidx.core.app.ActivityOptionsCompat
 import androidx.viewpager.widget.PagerAdapter
-import androidx.core.view.ViewCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.univofseoul_meal.Model.FragmentMainModel
+import androidx.core.app.ActivityOptionsCompat
+import androidx.core.view.ViewCompat
+import com.example.univofseoul_meal.Models.FragmentMainModel
 import com.example.univofseoul_meal.R
 import com.example.univofseoul_meal.SubActivity
 import kotlinx.android.synthetic.main.page_main.view.*
@@ -30,7 +29,13 @@ class pagerAdapter_main(internal var context : Context,
 
         view.setOnClickListener {
             val intent = Intent(context, SubActivity::class.java)
-            context.startActivity(intent)
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                context as Activity, placeName,ViewCompat.getTransitionName(placeName)!!)
+            intent.putExtra("address", "address${position}")
+            intent.putExtra("buildingName", placeName.text.toString())
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                context.startActivity(intent, options.toBundle())
+            }
         }
 
         container.addView(view)
