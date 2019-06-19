@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">UnivOfSeoul_meal</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_app_id">ca-app-pub-3037226098427883~6660873088</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--ca-app-pub-3037226098427883/1739718890출시할 때는 이걸로 unit아이디 바꿔주셈-->
+</resources>
